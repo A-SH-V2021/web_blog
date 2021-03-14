@@ -1,0 +1,517 @@
+@import url('../css/fonts.css');
+
+
+html,Body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* ----------------- fonts family vars--------- */
+:root{
+    /* theme colors */
+    --text-gray:#3f4954;
+    --text-ligth:#686666;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnigth:#104f55;
+
+    /* gradeint color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* fonts family vars */
+    --abel:'abel', cursive;
+    --anton:'anton', cursive;
+    --lexend:'lexend', cursive;
+    --josefin:'josefin', cursive;
+    --livvic:'livvic', cursive;
+}
+
+/* --------------------Global Classes----------- */
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-family: var(--lexend);
+    font-size: 2.5em;
+}
+h2{
+    font-family: var(--abel);
+}
+h3{
+    font-family: var(--lexend);
+    font-size: 1.3em;
+}
+button.btn{
+    border: none;
+    border-radius: 2em;
+    padding: 1em 3em;
+    font-size: 1em;
+} 
+span{
+    font-family: var(--abel);
+}
+
+.container{
+    margin:0 3vw;
+}
+.text-gray{
+    color: var(--text-gray);
+}
+p{
+    font-family: var(--lexend);
+    color: var(--text-ligth);
+}
+/* -----------X---------Global Classes-----X------ */
+
+/* --------------------Navbar----------------- */
+nav{
+    background-color: white;
+    padding: 0.1rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.text-gray{
+    font-size: 1.6em;
+    padding: 1em 0;
+}
+.nav-menu{
+    justify-content: space-between;
+}
+.toggle-collapse{
+    position: absolute;
+    top: 0;
+    left: 90%;
+    cursor: pointer;
+    display: none;
+}
+.toggle-icons{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.7em 0;
+}
+.toggle-icons i{
+    font-size: 1.4em;
+    color: var(--text-gray);
+}
+.collapse{
+    height: 23em;
+}
+.nav-items{
+    display: flex;
+    margin: 0;
+    margin-top: 1em;
+}
+.nav-link{
+    top: 1em;
+    padding: .2em 1em;
+    font-size: 1.1em;
+    position: relative;
+}
+.nav-link:hover{
+    background-color: var(--midnigth);
+}
+.nav-link:hover a{
+    color: var(--white);
+}
+.nav-brand a{
+    font-size: 1.6em;
+    padding: .5em 0;
+    display: block;
+    font-family: var(--lexend);
+}
+.social{
+    padding: .5em 0;
+}
+.social i{
+    padding: 0.2em;
+}
+.social i:hover {
+    color: #a1c4cf;
+}
+
+/* ----------X----------Navbar---------X-------- */
+
+/*------------------- main content----------- */
+/*---------------- title----------- */
+.site-title{
+    background: url('../assets/Background-image.png');
+    height: 110vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.site-background{
+    padding-top: 10em;
+    text-align: center;
+    color: var(--white);
+}
+h1,h3{
+    margin: 1.5em;
+}
+.btn{
+    margin: 1.8em;
+    background: var(--sky);
+}
+.btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/*---------X------- title------X----- */
+/*---------------- blog carousel----------- */
+main .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    background-size: 70%;
+}
+main.blog.blog-post{
+   padding-top: 3em;   
+}
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3em 2em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.blog-title{
+    padding: 2em;
+}
+main .blog-content.btn-blog{
+    padding: 7em 2em;
+    background: var(--sky);
+    margin: 0.5em;
+}
+.blog-content span{
+   display: block;
+}
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+   
+}
+.owl-nav .owl-prev .fa-long-arrow-alt-left,
+.owl-nav .owl-next .fa-long-arrow-alt-right{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2em;
+}
+.owl-nav .owl-prev,.owl-nav .owl-next{
+
+    outline: none;
+   
+}
+.owl-nav .owl-prev,.owl-nav .owl-next:hover{
+    background: transparent;
+    color: var(--text-gray);
+
+}
+
+
+/*---------X------- blog carousel------X----- */
+
+/*---------------- Site Content----------- */
+.site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.post-content{
+    width: 100%;
+    
+}
+.post-content > .post-image,.post-title{
+    position: relative;
+}
+.post-content > .post-image .post-info{
+    background: var(--sky);
+    padding: 1em 1em;
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+    border-radius: 3em;
+}
+.post-info span i{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.post-info span{
+    margin-right: 0.5em;
+}
+.post-content > .post-image > div{
+    overflow: hidden;
+}
+.post-content > .post-image img{
+    width: 100%;
+    transition: all 1s ease;
+}
+.post-content > .post-image img:hover{
+    transform: scale(1.3);
+}
+.post-title a{
+    font-family: var(--anton);
+    font-size: 1.5em;
+}
+.post-title .post-btn{
+    margin: 0;
+    border-radius: 0;
+    padding: -7em 1.5em;
+    transition: all .5s ease;
+}
+.post-title .post-btn:hover{
+    background: white;
+    color: var(--text-gray);
+    border: 1px solid  #a1c4fd;
+}
+.pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4em 0;
+}
+.pagination a{
+    padding: 0.6em 0.9em;
+    border-radius: 2em;
+    margin: 0.3em;
+    font-family: var(--lexend);
+}
+.pagination .pages{
+    background: var(--text-gray);
+    color: white;
+}
+/*---------X-------Site Content------X----- */
+/*----------------SideBar----------- */
+.side-bar{
+    padding-left: 2em;
+}
+.category-list{
+    font-family: var(--livvic);
+}
+.category-list .list-items{
+    background: var(--sky);
+    padding: 0.4em 1em;
+    margin: 0.8em;
+    border-radius: 3em;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.category-list .list-items a{
+    color: black;
+}
+.side-bar .popular-post h2{
+    padding-top: 2em;
+}
+.popular-post .post-content{
+    margin-top: 2em;
+}
+.side-bar .popular-post .post-info{
+    padding: 0.4em 0.1em;
+    bottom: 0em;
+    left: 0em;
+    border-radius: 0em;
+    background: white;
+}
+.popular-post .post-content .post-info span i{
+    font-size: 1.2em;
+}
+.popular-post .post-content .post-title a{
+    font-size: 1em;
+}
+.newsletter{
+   padding-top: 19em;
+}
+.newsletter .form-element{
+    padding: 0.5em 2em;
+}
+.input-element{
+    width: 80%;
+    height: 1.9em;
+    padding: 0.3em 0.5em;
+    font-family: var(--lexend);
+    font-size: 1em;
+}
+.newsletter .form-btn{
+    border-radius: 0;
+    padding: 0.8em 32%;
+    margin: 1em 0;
+    background: var(--sky);
+}
+.popular-tag .tags{
+    padding-left: 2em;
+    flex-wrap: wrap;
+}
+.popular-tag .tag{
+    background: var(--sky);
+    padding:0.5em 0.8em;
+    margin-right: 0.5em ;
+    margin-top: 1em;
+    border-radius: 40%;
+}
+
+/*---------X-------SideBar------X----- */
+
+
+/*----------X--------- main content------X----- */
+/* ----------------footer---------------- */
+.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+.footer .container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+}
+.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 1em 0.9em;
+}
+.footer .container h2{
+    color: white;
+}
+.newsletter .form-elements{
+    background: black;
+    display: inline-block;
+}
+.newsletter .form-elements input{
+    padding: 0.5em 0.8em;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--josefin);
+    font-size: 1em;
+    width: 70%;
+}
+.newsletter .form-elements span{
+    background: var(--sky);
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+}
+.footer .instagram div>img{
+    width: 25%;
+    height: 50%;
+    margin: 0.3em 0.4em;
+}
+.footer .follow div i{
+    color: var(--white);
+    padding: 0.4em;
+}
+.rights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.rights h6{
+    font-size: 1.2em;
+    color: var(--text-gray);
+}
+.rights span{
+    color: white;
+}
+.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+.footer .move-up span{
+    color: var(--midnigth);
+    transition: all 0.5s ease-in;
+}
+.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+/* ---------x-------footer-------x--------- */
+/* --------------------view port less then or equal to 1130px----------------- */
+@media only screen and (max-width: 1130px){
+    .post-content > .post-image .post-info{
+        left: 0;
+        border-radius: 0;
+    }
+    .side-bar .popular-post .post-content .post-image .post-info{
+        display: none !important;
+    }
+    .footer .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .btn{
+        margin: 0;
+    }
+}
+/*     x          view port less then or equal to 1130px      x   */
+
+
+/* --------------------view port less then or equal to 750px----------------- */
+@media only screen and (max-width: 48em){
+    .nav-menu,.nav-items{
+        flex-direction: column;
+    }
+    .nav-link{
+        margin-top: 1em;
+    }
+    .toggle-collapse{
+        display:inherit;
+    }
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+    .footer .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .social{
+        padding: 1em 0px 0px 2em;
+        /* padding-left: 2em; */
+    }
+    main .container{
+        margin: 0 1.4em;
+    }
+    .newsletter {
+        padding-top: 2em;
+    }
+    .popular-tag{
+        margin-bottom: 2em;
+    }
+    .btn{
+        margin: 0;
+    }
+}
+
+/* ----------X----------view port less then or equal to 750px---------X-------- */
+
+/* --------------------view port less then or equal to 520px----------------- */
+@media only screen and (max-width: 32.5em){
+    .post-content .post-image .post-info{
+        display: none;
+    }
+    .btn{
+        margin: 0;
+    }
+    .nav-items{
+        margin: 0px;
+    }
+    
+}
+
+/* ----------X----------view port less then or equal to 520px---------X-------- */
